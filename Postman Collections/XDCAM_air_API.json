@@ -1,0 +1,486 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0",
+    "title": "XDCAM air API",
+    "description": "XDACAM air (XAIR) provides a collection of Rest API so that an external application can interact with it.  This will allow a Third Party to interact with the XAIR and leverage its power.\n\nThe API set is broken into multiple categories, which will evolve with time.  The initial category will be manipulation of \"Planning Metadata\".",
+    "license": {
+      "name": "MIT",
+      "url": "http://github.com/gruntjs/grunt/blob/master/LICENSE-MIT"
+    }
+  },
+  "host": "DefaultParameterValue",
+  "basePath": "/",
+  "securityDefinitions": {
+    "auth": {
+      "type": "basic",
+      "x-testValue": [],
+      "x-skip-client-authentication": false
+    }
+  },
+  "schemes": [
+    "https"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/oauth2/token": {
+      "post": {
+        "description": "XAIR API uses the Resource Owner Password Credentials Grant flow of OAuth 2.0 for authentication and allows applications to submit authenticated requests on behalf of individual XAIR users.  \nThe authentication token returned should be used as Bearer Token in all Subsequent Call.",
+        "summary": "Authenticate",
+        "tags": [
+          "Authentication"
+        ],
+        "operationId": "Oauth2TokenPost",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/AuthenticateRequest"
+            }
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "auth": []
+          }
+        ],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "POST",
+              "uri": "/oauth2/token",
+              "headers": {
+                "Content-Type": "application/json",
+                "Authorization": "Basic [encoded credential]"
+              },
+              "body": "{\r\n  \"client_id\": \"yjtgrjdag8is4cxb\",\r\n  \"client_secret\": \"q1h0jt4fi0bctwb5\",\r\n  \"grant_type\": \"password\"\r\n}"
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "Authenticate",
+            "x-testDescription": "XAIR API uses the Resource Owner Password Credentials Grant flow of OAuth 2.0 for authentication and allows applications to submit authenticated requests on behalf of individual XAIR users.  \nThe authentication token returned should be used as Bearer Token in all Subsequent Call."
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/xair/planning-metadata-gateway/v1/<gatewayId>": {
+      "get": {
+        "description": "Get Detail of a Gateway",
+        "summary": "Get Detail of a Gateway",
+        "tags": [
+          "Planning Metadata Gateway"
+        ],
+        "operationId": "XairPlanningMetadataGatewayV1GatewayIdGet",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "GET",
+              "uri": "/xair/planning-metadata-gateway/v1/<gatewayId>",
+              "headers": {
+                "Authorization": "Bearer [bearer token]"
+              }
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "Get Detail of a Gateway",
+            "x-testDescription": "Get Detail of a Gateway"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/planning-metadata-gateway/v1": {
+      "get": {
+        "description": "Obtain a list of Gateway connection information that the login users can access",
+        "summary": "List accessible Gateways",
+        "tags": [
+          "Planning Metadata Gateway"
+        ],
+        "operationId": "PlanningMetadataGatewayV1Get",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "GET",
+              "uri": "/planning-metadata-gateway/v1",
+              "headers": {
+                "Authorization": "Bearer [bearer token]"
+              }
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "List accessible Gateways",
+            "x-testDescription": "Obtain a list of Gateway connection information that the login users can access"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/planning-metadata-getway/V1/metadata": {
+      "put": {
+        "description": "Create and/or Update Planning Metadata with xml Payload",
+        "summary": "Create and/or Update Metadata",
+        "tags": [
+          "Planning Metadata Gateway"
+        ],
+        "operationId": "PlanningMetadataGetwayV1MetadataPut",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "PUT",
+              "uri": "/planning-metadata-getway/V1/metadata",
+              "headers": {
+                "Authorization": "Bearer [bearer token]",
+                "Content-Type": "application/xml"
+              }
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "Create and/or Update Metadata",
+            "x-testDescription": "Create and/or Update Planning Metadata with xml Payload"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/<gatewayId>": {
+      "delete": {
+        "description": "Delete a Metadata based on the Metadata Id",
+        "summary": "{url}/planning-metadata/v1/metadata/<gatewayId>/metadata_id",
+        "tags": [
+          "Planning Metadata Gateway"
+        ],
+        "operationId": "GatewayIdDelete",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "DELETE",
+              "uri": "/<gatewayId>",
+              "headers": {
+                "Authorization": "Bearer [bearer token]"
+              }
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "{url}/planning-metadata/v1/metadata/<gatewayId>/metadata_id",
+            "x-testDescription": "Delete a Metadata based on the Metadata Id"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/xair/planning-metadata-gateway/v1/auth/token": {
+      "post": {
+        "description": "In order to access any Plugin Metadata Gateqay, the user needs to authenticate with that particular gateway.\n\nThis call will return the Gateway Details, including the Gateway ID.",
+        "summary": "Authenticate with a Gateway",
+        "tags": [
+          "Planning Metadata Gateway"
+        ],
+        "operationId": "XairPlanningMetadataGatewayV1AuthTokenPost",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/AuthenticateWithAGatewayrequest"
+            }
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "POST",
+              "uri": "/xair/planning-metadata-gateway/v1/auth/token",
+              "headers": {
+                "Content-Type": "application/json",
+                "Authorization": "Basic [encoded Credentials]"
+              },
+              "body": "\r\n{\r\n    \"mosId\": \"ID.SONYCAM.MOS\",\r\n    \"user\": \"nrcsCognitoUser\",\r\n    \"pass\": \"password\"\r\n}"
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "Authenticate with a Gateway",
+            "x-testDescription": "In order to access any Plugin Metadata Gateqay, the user needs to authenticate with that particular gateway.\n\nThis call will return the Gateway Details, including the Gateway ID."
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    }
+  },
+  "definitions": {
+    "AuthenticateRequest": {
+      "title": "AuthenticateRequest",
+      "example": {
+        "client_id": "yjtgrjdag8is4cxb",
+        "client_secret": "q1h0jt4fi0bctwb5",
+        "grant_type": "password"
+      },
+      "type": "object",
+      "properties": {
+        "client_id": {
+          "description": "",
+          "example": "yjtgrjdag8is4cxb",
+          "type": "string"
+        },
+        "client_secret": {
+          "description": "",
+          "example": "q1h0jt4fi0bctwb5",
+          "type": "string"
+        },
+        "grant_type": {
+          "description": "",
+          "example": "password",
+          "type": "string"
+        }
+      },
+      "required": [
+        "client_id",
+        "client_secret",
+        "grant_type"
+      ]
+    },
+    "AuthenticateWithAGatewayrequest": {
+      "title": "Authenticate with a GatewayRequest",
+      "example": {
+        "mosId": "ID.SONYCAM.MOS",
+        "user": "nrcsCognitoUser",
+        "pass": "password"
+      },
+      "type": "object",
+      "properties": {
+        "mosId": {
+          "description": "",
+          "example": "ID.SONYCAM.MOS",
+          "type": "string"
+        },
+        "user": {
+          "description": "",
+          "example": "nrcsCognitoUser",
+          "type": "string"
+        },
+        "pass": {
+          "description": "",
+          "example": "password",
+          "type": "string"
+        }
+      },
+      "required": [
+        "mosId",
+        "user",
+        "pass"
+      ]
+    }
+  }
+}
