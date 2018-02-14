@@ -3,11 +3,7 @@
   "info": {
     "version": "1.0",
     "title": "XDCAM air API",
-    "description": "XDACAM air (XAIR) provides a collection of Rest API so that an external application can interact with it.  This will allow a Third Party to interact with the XAIR and leverage its power.\n\nThe API set is broken into multiple categories, which will evolve with time.  The initial category will be manipulation of \"Planning Metadata\".",
-    "license": {
-      "name": "MIT",
-      "url": "http://github.com/gruntjs/grunt/blob/master/LICENSE-MIT"
-    }
+    "description": "XDACAM air (XAIR) provides a collection of Rest API so that an external application can interact with it.  This will allow a Third Party to interact with the XAIR and leverage its power.\n\nThe API set is broken into multiple categories, which will evolve with time.  The initial category will be manipulation of \"Planning Metadata\"."
   },
   "host": "DefaultParameterValue",
   "basePath": "/",
