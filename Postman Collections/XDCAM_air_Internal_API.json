@@ -1,0 +1,1185 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0",
+    "title": "XDCAM air Internal API",
+    "description": "TODO: Add Description"
+  },
+  "host": "DefaultParameterValue",
+  "basePath": "/rest",
+  "securityDefinitions": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "implicit",
+      "authorizationUrl": "https://DefaultParameterValue/rest",
+      "scopes": {},
+      "x-skip-client-authentication": false
+    }
+  },
+  "schemes": [
+    "https"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/devices/transmitters": {
+      "get": {
+        "description": "Get Transmitters",
+        "summary": "List  Transmitters",
+        "tags": [
+          "Device API"
+        ],
+        "operationId": "DevicesTransmittersGet",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "auth": []
+          }
+        ],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "GET",
+              "uri": "/devices/transmitters"
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "List  Transmitters",
+            "x-testDescription": "Get Transmitters"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/devices/receivers": {
+      "get": {
+        "description": "Get Receivers",
+        "summary": "List Receivers",
+        "tags": [
+          "Device API"
+        ],
+        "operationId": "DevicesReceiversGet",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "auth": []
+          }
+        ],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "GET",
+              "uri": "/devices/receivers"
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "List Receivers",
+            "x-testDescription": "Get Receivers"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/streaming": {
+      "post": {
+        "description": "TODO: Add Description",
+        "summary": "Start Streaming",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "StreamingPost",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/StartStreamingrequest"
+            }
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "auth": []
+          }
+        ],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "POST",
+              "uri": "/streaming",
+              "headers": {
+                "Content-Type": "application/json"
+              },
+              "body": "{\"type\":\"streaming\",\"inputSource\":{\"type\":\"transmitter\",\"id\":\"AWLbBnZKNZF78jESAjPL\"},\"outputPort\":{\"receiver\":{\"id\":\"AWHpD9GLNZF78jESAjB_\"},\"id\":\"AWHpD9GLNZF78jESAjB_-1\"},\"networkRange\":\"auto\",\"bitrate\":0,\"delay\":2.5,\"force\":false}"
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "Start Streaming",
+            "x-testDescription": "TODO: Add Description"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/streaming/{streaming-id}": {
+      "delete": {
+        "description": "TODO: Add Description",
+        "summary": "Stop Streaming",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "StreamingByStreamingIdDelete",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "streaming-id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "auth": []
+          }
+        ],
+        "x-unitTests": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/devices/transmitters/{transmitter-id}/thumbnail": {
+      "get": {
+        "description": "Get a thumbnail from the Transmitter",
+        "summary": "Get Thumbnail",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "DevicesTransmittersThumbnailByTransmitterIdGet",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "transmitter-id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "auth": []
+          }
+        ],
+        "x-unitTests": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/streaming/{streaming-id}/audio-level": {
+      "get": {
+        "description": "TODO: Add Description",
+        "summary": "Get Audio Level",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "StreamingAudioLevelByStreamingIdGet",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "streaming-id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "auth": []
+          }
+        ],
+        "x-unitTests": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/streaming/{streaming-id}/transfer-info": {
+      "get": {
+        "description": "TODO: Add Description",
+        "summary": "Get Transfer Info",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "StreamingTransferInfoByStreamingIdGet",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "streaming-id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/GetTransferInfo"
+            },
+            "examples": {
+              "application/json": {
+                "mediaData": [
+                  {
+                    "bitrateList": [
+                      3409184,
+                      3395620,
+                      3458604,
+                      3484332,
+                      3430112,
+                      3417100,
+                      2813452,
+                      2825676,
+                      3414404,
+                      3407544,
+                      3414196,
+                      3362372,
+                      3395716,
+                      3434304,
+                      3394416,
+                      3515048,
+                      3581864,
+                      3487044,
+                      3516244,
+                      3514804,
+                      3468344,
+                      3465668,
+                      3510896,
+                      3544340,
+                      3379164,
+                      3298908,
+                      3378688,
+                      3431736,
+                      3463388,
+                      3410136,
+                      3366844,
+                      3433152,
+                      3329088,
+                      3371672,
+                      3509468,
+                      3464548,
+                      3462788,
+                      3468628,
+                      3481508,
+                      3516048,
+                      2698172,
+                      2664152,
+                      3414400,
+                      3445496,
+                      3488808,
+                      3442832,
+                      3495524,
+                      3439228,
+                      2944248,
+                      2994216,
+                      3457724,
+                      3437172,
+                      3450048,
+                      3484152,
+                      3351844,
+                      3310588,
+                      3320772,
+                      3302816,
+                      3425128,
+                      3444868
+                    ],
+                    "qosLossList": [
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ],
+                    "maxBitrateValue": 3588596
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "auth": []
+          }
+        ],
+        "x-unitTests": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    }
+  },
+  "definitions": {
+    "StartStreamingrequest": {
+      "title": "Start StreamingRequest",
+      "example": {
+        "type": "streaming",
+        "inputSource": {
+          "type": "transmitter",
+          "id": "AWLbBnZKNZF78jESAjPL"
+        },
+        "outputPort": {
+          "receiver": {
+            "id": "AWHpD9GLNZF78jESAjB_"
+          },
+          "id": "AWHpD9GLNZF78jESAjB_-1"
+        },
+        "networkRange": "auto",
+        "bitrate": 0,
+        "delay": 2.5,
+        "force": false
+      },
+      "type": "object",
+      "properties": {
+        "type": {
+          "description": "",
+          "example": "streaming",
+          "type": "string"
+        },
+        "inputSource": {
+          "$ref": "#/definitions/InputSource"
+        },
+        "outputPort": {
+          "$ref": "#/definitions/OutputPort"
+        },
+        "networkRange": {
+          "description": "",
+          "example": "auto",
+          "type": "string"
+        },
+        "bitrate": {
+          "description": "",
+          "example": 0,
+          "type": "integer",
+          "format": "int32"
+        },
+        "delay": {
+          "description": "",
+          "example": 2.5,
+          "type": "number",
+          "format": "double"
+        },
+        "force": {
+          "description": "",
+          "example": false,
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "type",
+        "inputSource",
+        "outputPort",
+        "networkRange",
+        "bitrate",
+        "delay",
+        "force"
+      ]
+    },
+    "InputSource": {
+      "title": "InputSource",
+      "example": {
+        "type": "transmitter",
+        "id": "AWLbBnZKNZF78jESAjPL"
+      },
+      "type": "object",
+      "properties": {
+        "type": {
+          "description": "",
+          "example": "transmitter",
+          "type": "string"
+        },
+        "id": {
+          "description": "",
+          "example": "AWLbBnZKNZF78jESAjPL",
+          "type": "string"
+        }
+      },
+      "required": [
+        "type",
+        "id"
+      ]
+    },
+    "OutputPort": {
+      "title": "OutputPort",
+      "example": {
+        "receiver": {
+          "id": "AWHpD9GLNZF78jESAjB_"
+        },
+        "id": "AWHpD9GLNZF78jESAjB_-1"
+      },
+      "type": "object",
+      "properties": {
+        "receiver": {
+          "$ref": "#/definitions/Receiver"
+        },
+        "id": {
+          "description": "",
+          "example": "AWHpD9GLNZF78jESAjB_-1",
+          "type": "string"
+        }
+      },
+      "required": [
+        "receiver",
+        "id"
+      ]
+    },
+    "Receiver": {
+      "title": "Receiver",
+      "example": {
+        "id": "AWHpD9GLNZF78jESAjB_"
+      },
+      "type": "object",
+      "properties": {
+        "id": {
+          "description": "",
+          "example": "AWHpD9GLNZF78jESAjB_",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id"
+      ]
+    },
+    "GetTransferInfo": {
+      "title": "Get Transfer Info",
+      "example": {
+        "mediaData": [
+          {
+            "bitrateList": [
+              3409184,
+              3395620,
+              3458604,
+              3484332,
+              3430112,
+              3417100,
+              2813452,
+              2825676,
+              3414404,
+              3407544,
+              3414196,
+              3362372,
+              3395716,
+              3434304,
+              3394416,
+              3515048,
+              3581864,
+              3487044,
+              3516244,
+              3514804,
+              3468344,
+              3465668,
+              3510896,
+              3544340,
+              3379164,
+              3298908,
+              3378688,
+              3431736,
+              3463388,
+              3410136,
+              3366844,
+              3433152,
+              3329088,
+              3371672,
+              3509468,
+              3464548,
+              3462788,
+              3468628,
+              3481508,
+              3516048,
+              2698172,
+              2664152,
+              3414400,
+              3445496,
+              3488808,
+              3442832,
+              3495524,
+              3439228,
+              2944248,
+              2994216,
+              3457724,
+              3437172,
+              3450048,
+              3484152,
+              3351844,
+              3310588,
+              3320772,
+              3302816,
+              3425128,
+              3444868
+            ],
+            "qosLossList": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "maxBitrateValue": 3588596
+          }
+        ]
+      },
+      "type": "object",
+      "properties": {
+        "mediaData": {
+          "description": "",
+          "example": [
+            {
+              "bitrateList": [
+                3409184,
+                3395620,
+                3458604,
+                3484332,
+                3430112,
+                3417100,
+                2813452,
+                2825676,
+                3414404,
+                3407544,
+                3414196,
+                3362372,
+                3395716,
+                3434304,
+                3394416,
+                3515048,
+                3581864,
+                3487044,
+                3516244,
+                3514804,
+                3468344,
+                3465668,
+                3510896,
+                3544340,
+                3379164,
+                3298908,
+                3378688,
+                3431736,
+                3463388,
+                3410136,
+                3366844,
+                3433152,
+                3329088,
+                3371672,
+                3509468,
+                3464548,
+                3462788,
+                3468628,
+                3481508,
+                3516048,
+                2698172,
+                2664152,
+                3414400,
+                3445496,
+                3488808,
+                3442832,
+                3495524,
+                3439228,
+                2944248,
+                2994216,
+                3457724,
+                3437172,
+                3450048,
+                3484152,
+                3351844,
+                3310588,
+                3320772,
+                3302816,
+                3425128,
+                3444868
+              ],
+              "qosLossList": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "maxBitrateValue": 3588596
+            }
+          ],
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/MediaDatum"
+          }
+        }
+      },
+      "required": [
+        "mediaData"
+      ]
+    },
+    "MediaDatum": {
+      "title": "MediaDatum",
+      "example": {
+        "bitrateList": [
+          3409184,
+          3395620,
+          3458604,
+          3484332,
+          3430112,
+          3417100,
+          2813452,
+          2825676,
+          3414404,
+          3407544,
+          3414196,
+          3362372,
+          3395716,
+          3434304,
+          3394416,
+          3515048,
+          3581864,
+          3487044,
+          3516244,
+          3514804,
+          3468344,
+          3465668,
+          3510896,
+          3544340,
+          3379164,
+          3298908,
+          3378688,
+          3431736,
+          3463388,
+          3410136,
+          3366844,
+          3433152,
+          3329088,
+          3371672,
+          3509468,
+          3464548,
+          3462788,
+          3468628,
+          3481508,
+          3516048,
+          2698172,
+          2664152,
+          3414400,
+          3445496,
+          3488808,
+          3442832,
+          3495524,
+          3439228,
+          2944248,
+          2994216,
+          3457724,
+          3437172,
+          3450048,
+          3484152,
+          3351844,
+          3310588,
+          3320772,
+          3302816,
+          3425128,
+          3444868
+        ],
+        "qosLossList": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "maxBitrateValue": 3588596
+      },
+      "type": "object",
+      "properties": {
+        "bitrateList": {
+          "description": "",
+          "example": [
+            3409184,
+            3395620,
+            3458604,
+            3484332,
+            3430112,
+            3417100,
+            2813452,
+            2825676,
+            3414404,
+            3407544,
+            3414196,
+            3362372,
+            3395716,
+            3434304,
+            3394416,
+            3515048,
+            3581864,
+            3487044,
+            3516244,
+            3514804,
+            3468344,
+            3465668,
+            3510896,
+            3544340,
+            3379164,
+            3298908,
+            3378688,
+            3431736,
+            3463388,
+            3410136,
+            3366844,
+            3433152,
+            3329088,
+            3371672,
+            3509468,
+            3464548,
+            3462788,
+            3468628,
+            3481508,
+            3516048,
+            2698172,
+            2664152,
+            3414400,
+            3445496,
+            3488808,
+            3442832,
+            3495524,
+            3439228,
+            2944248,
+            2994216,
+            3457724,
+            3437172,
+            3450048,
+            3484152,
+            3351844,
+            3310588,
+            3320772,
+            3302816,
+            3425128,
+            3444868
+          ],
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "qosLossList": {
+          "description": "",
+          "example": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "maxBitrateValue": {
+          "description": "",
+          "example": 3588596,
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "required": [
+        "bitrateList",
+        "qosLossList",
+        "maxBitrateValue"
+      ]
+    }
+  }
+}
