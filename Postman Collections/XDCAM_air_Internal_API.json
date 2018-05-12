@@ -5,19 +5,19 @@
     "title": "XDCAM air Internal API",
     "description": "TODO: Add Description"
   },
-  "host": "DefaultParameterValue",
+  "host": "example.com",
   "basePath": "/rest",
   "securityDefinitions": {
     "auth": {
       "type": "oauth2",
       "flow": "implicit",
-      "authorizationUrl": "https://DefaultParameterValue/rest",
+      "authorizationUrl": "http://example.com/rest",
       "scopes": {},
       "x-skip-client-authentication": false
     }
   },
   "schemes": [
-    "https"
+    "http"
   ],
   "consumes": [
     "application/json"
@@ -26,64 +26,14 @@
     "application/json"
   ],
   "paths": {
-    "/devices/transmitters": {
-      "get": {
-        "description": "Get Transmitters",
-        "summary": "List  Transmitters",
-        "tags": [
-          "Device API"
-        ],
-        "operationId": "DevicesTransmittersGet",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [],
-        "responses": {
-          "200": {
-            "description": ""
-          }
-        },
-        "security": [
-          {
-            "auth": []
-          }
-        ],
-        "x-unitTests": [
-          {
-            "request": {
-              "method": "GET",
-              "uri": "/devices/transmitters"
-            },
-            "expectedResponse": {
-              "x-allowExtraHeaders": true,
-              "x-bodyMatchMode": "NONE",
-              "x-arrayOrderedMatching": false,
-              "x-arrayCheckCount": false,
-              "x-matchResponseSchema": true,
-              "headers": {}
-            },
-            "x-testShouldPass": true,
-            "x-testEnabled": true,
-            "x-testName": "List  Transmitters",
-            "x-testDescription": "Get Transmitters"
-          }
-        ],
-        "x-operation-settings": {
-          "CollectParameters": false,
-          "AllowDynamicQueryParameters": false,
-          "AllowDynamicFormParameters": false,
-          "IsMultiContentStreaming": false
-        }
-      }
-    },
-    "/devices/receivers": {
+    "/rest/devices/receivers": {
       "get": {
         "description": "Get Receivers",
         "summary": "List Receivers",
         "tags": [
-          "Device API"
+          "Receivers"
         ],
-        "operationId": "DevicesReceiversGet",
+        "operationId": "RestDevicesReceiversGet",
         "produces": [
           "application/json"
         ],
@@ -102,7 +52,7 @@
           {
             "request": {
               "method": "GET",
-              "uri": "/devices/receivers"
+              "uri": "/rest/devices/receivers"
             },
             "expectedResponse": {
               "x-allowExtraHeaders": true,
@@ -126,14 +76,746 @@
         }
       }
     },
-    "/streaming": {
+    "/rest/devices/supported/receivers": {
+      "get": {
+        "description": "List all Receivers",
+        "summary": "List  Supported Receivers",
+        "tags": [
+          "Receivers"
+        ],
+        "operationId": "RestDevicesSupportedReceiversGet",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "auth": []
+          }
+        ],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "GET",
+              "uri": "/rest/devices/supported/receivers"
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "List  Supported Receivers",
+            "x-testDescription": "List all Receivers"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/rest/devices/transmitters": {
+      "get": {
+        "description": "Get Transmitters",
+        "summary": "List  Transmitters",
+        "tags": [
+          "Transmitters"
+        ],
+        "operationId": "RestDevicesTransmittersGet",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "auth": []
+          }
+        ],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "GET",
+              "uri": "/rest/devices/transmitters"
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "List  Transmitters",
+            "x-testDescription": "Get Transmitters"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/rest/devices/supported/transmitters": {
+      "get": {
+        "description": "List all Transmitters",
+        "summary": "List  Supported Transmitters",
+        "tags": [
+          "Transmitters"
+        ],
+        "operationId": "RestDevicesSupportedTransmittersGet",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "auth": []
+          }
+        ],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "GET",
+              "uri": "/rest/devices/supported/transmitters"
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "List  Supported Transmitters",
+            "x-testDescription": "List all Transmitters"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/rest/auth/token": {
+      "delete": {
+        "description": "Logout",
+        "summary": "Logout",
+        "tags": [
+          "Directory"
+        ],
+        "operationId": "RestAuthTokenDelete",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "auth": []
+          }
+        ],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "DELETE",
+              "uri": "/rest/auth/token"
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "Logout",
+            "x-testDescription": "Logout"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/rest/auth/user": {
+      "post": {
+        "description": "if Successful the token will be returned in Response header as \"xairtoken'\"",
+        "summary": "Login",
+        "tags": [
+          "Directory"
+        ],
+        "operationId": "RestAuthUserPost",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/LoginRequest"
+            }
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "POST",
+              "uri": "/rest/auth/user",
+              "headers": {
+                "Content-Type": "application/json"
+              },
+              "body": "{\"username\":\"{{user}}\",\"password\":\"{{pswd}}\"}"
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "Login",
+            "x-testDescription": "if Successful the token will be returned in Response header as \"xairtoken'\""
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/rest/entries/users": {
+      "get": {
+        "description": "List Users including Admin User",
+        "summary": "List All Users",
+        "tags": [
+          "Directory"
+        ],
+        "operationId": "RestEntriesUsersGet",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "auth": []
+          }
+        ],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "GET",
+              "uri": "/rest/entries/users"
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "List All Users",
+            "x-testDescription": "List Users including Admin User"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/rest/entries/tenants/{tenant-id}": {
+      "get": {
+        "description": "List Users including Admin User",
+        "summary": "Get Tenant Detail",
+        "tags": [
+          "Directory"
+        ],
+        "operationId": "RestEntriesTenantsByTenantIdGet",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "tenant-id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "auth": []
+          }
+        ],
+        "x-unitTests": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/rest/entries/groups": {
+      "get": {
+        "description": "List Users including Admin User",
+        "summary": "List All Groups",
+        "tags": [
+          "Directory"
+        ],
+        "operationId": "RestEntriesGroupsGet",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "auth": []
+          }
+        ],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "GET",
+              "uri": "/rest/entries/groups"
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "List All Groups",
+            "x-testDescription": "List Users including Admin User"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      },
+      "post": {
+        "description": "List Users including Admin User",
+        "summary": "Create Project or Group",
+        "tags": [
+          "Directory"
+        ],
+        "operationId": "RestEntriesGroupsPost",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/CreateProjectOrGrouprequest"
+            }
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "auth": []
+          }
+        ],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "POST",
+              "uri": "/rest/entries/groups",
+              "headers": {
+                "Content-Type": "application/json"
+              },
+              "body": "{\"name\":\"Temp Project\"}"
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "Create Project or Group",
+            "x-testDescription": "List Users including Admin User"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/rest/entries/groups/{group-id}": {
+      "put": {
+        "description": "List Users including Admin User",
+        "summary": "Rename Group",
+        "tags": [
+          "Directory"
+        ],
+        "operationId": "RestEntriesGroupsByGroupIdPut",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/RenameGrouprequest"
+            }
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "group-id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "auth": []
+          }
+        ],
+        "x-unitTests": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      },
+      "delete": {
+        "description": "List Users including Admin User",
+        "summary": "Delete Group",
+        "tags": [
+          "Directory"
+        ],
+        "operationId": "RestEntriesGroupsByGroupIdDelete",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "group-id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "auth": []
+          }
+        ],
+        "x-unitTests": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/rest/entries/credentials": {
+      "get": {
+        "description": "TODO: Add Description",
+        "summary": "List Credentials",
+        "tags": [
+          "Directory"
+        ],
+        "operationId": "RestEntriesCredentialsGet",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "auth": []
+          }
+        ],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "GET",
+              "uri": "/rest/entries/credentials"
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "List Credentials",
+            "x-testDescription": "TODO: Add Description"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/entries": {
+      "get": {
+        "description": "TODO: Add Description",
+        "summary": "List Entries",
+        "tags": [
+          "Directory"
+        ],
+        "operationId": "EntriesGet",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "useAdminRole",
+            "in": "query",
+            "required": true,
+            "type": "boolean",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "auth": []
+          }
+        ],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "GET",
+              "uri": "/entries?useAdminRole=true"
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "List Entries",
+            "x-testDescription": "TODO: Add Description"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/devices/health": {
+      "get": {
+        "description": "List Users including Admin User",
+        "summary": "Misc GET",
+        "tags": [
+          "Scratch/Temporary"
+        ],
+        "operationId": "DevicesHealthGet",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "auth": []
+          }
+        ],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "GET",
+              "uri": "/devices/health"
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "Misc GET",
+            "x-testDescription": "List Users including Admin User"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/rest/streaming": {
       "post": {
         "description": "TODO: Add Description",
         "summary": "Start Streaming",
         "tags": [
           "Misc"
         ],
-        "operationId": "StreamingPost",
+        "operationId": "RestStreamingPost",
         "produces": [
           "application/json"
         ],
@@ -169,7 +851,7 @@
           {
             "request": {
               "method": "POST",
-              "uri": "/streaming",
+              "uri": "/rest/streaming",
               "headers": {
                 "Content-Type": "application/json"
               },
@@ -197,14 +879,14 @@
         }
       }
     },
-    "/streaming/{streaming-id}": {
+    "/rest/streaming/{streaming-id}": {
       "delete": {
         "description": "TODO: Add Description",
         "summary": "Stop Streaming",
         "tags": [
           "Misc"
         ],
-        "operationId": "StreamingByStreamingIdDelete",
+        "operationId": "RestStreamingByStreamingIdDelete",
         "produces": [
           "application/json"
         ],
@@ -236,14 +918,14 @@
         }
       }
     },
-    "/devices/transmitters/{transmitter-id}/thumbnail": {
+    "/rest/devices/transmitters/{transmitter-id}/thumbnail": {
       "get": {
         "description": "Get a thumbnail from the Transmitter",
         "summary": "Get Thumbnail",
         "tags": [
           "Misc"
         ],
-        "operationId": "DevicesTransmittersThumbnailByTransmitterIdGet",
+        "operationId": "RestDevicesTransmittersThumbnailByTransmitterIdGet",
         "produces": [
           "application/json"
         ],
@@ -275,14 +957,14 @@
         }
       }
     },
-    "/streaming/{streaming-id}/audio-level": {
+    "/rest/streaming/{streaming-id}/audio-level": {
       "get": {
         "description": "TODO: Add Description",
         "summary": "Get Audio Level",
         "tags": [
           "Misc"
         ],
-        "operationId": "StreamingAudioLevelByStreamingIdGet",
+        "operationId": "RestStreamingAudioLevelByStreamingIdGet",
         "produces": [
           "application/json"
         ],
@@ -314,14 +996,14 @@
         }
       }
     },
-    "/streaming/{streaming-id}/transfer-info": {
+    "/rest/streaming/{streaming-id}/transfer-info": {
       "get": {
         "description": "TODO: Add Description",
         "summary": "Get Transfer Info",
         "tags": [
           "Misc"
         ],
-        "operationId": "StreamingTransferInfoByStreamingIdGet",
+        "operationId": "RestStreamingTransferInfoByStreamingIdGet",
         "produces": [
           "application/json"
         ],
@@ -491,6 +1173,64 @@
     }
   },
   "definitions": {
+    "LoginRequest": {
+      "title": "LoginRequest",
+      "example": {
+        "username": "{{user}}",
+        "password": "{{pswd}}"
+      },
+      "type": "object",
+      "properties": {
+        "username": {
+          "description": "",
+          "example": "{{user}}",
+          "type": "string"
+        },
+        "password": {
+          "description": "",
+          "example": "{{pswd}}",
+          "type": "string"
+        }
+      },
+      "required": [
+        "username",
+        "password"
+      ]
+    },
+    "CreateProjectOrGrouprequest": {
+      "title": "Create Project or GroupRequest",
+      "example": {
+        "name": "Temp Project"
+      },
+      "type": "object",
+      "properties": {
+        "name": {
+          "description": "",
+          "example": "Temp Project",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ]
+    },
+    "RenameGrouprequest": {
+      "title": "Rename GroupRequest",
+      "example": {
+        "name": "Temp Project Renamed"
+      },
+      "type": "object",
+      "properties": {
+        "name": {
+          "description": "",
+          "example": "Temp Project Renamed",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ]
+    },
     "StartStreamingrequest": {
       "title": "Start StreamingRequest",
       "example": {
