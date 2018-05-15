@@ -343,18 +343,26 @@
         }
       }
     },
-    "/rest/entries/users": {
+    "/entries/users": {
       "get": {
         "description": "List Users including Admin User",
         "summary": "List All Users",
         "tags": [
           "Directory"
         ],
-        "operationId": "RestEntriesUsersGet",
+        "operationId": "EntriesUsersGet",
         "produces": [
           "application/json"
         ],
-        "parameters": [],
+        "parameters": [
+          {
+            "name": "useAdminRole",
+            "in": "query",
+            "required": true,
+            "type": "boolean",
+            "description": ""
+          }
+        ],
         "responses": {
           "200": {
             "description": ""
@@ -369,7 +377,7 @@
           {
             "request": {
               "method": "GET",
-              "uri": "/rest/entries/users"
+              "uri": "/entries/users?useAdminRole=true"
             },
             "expectedResponse": {
               "x-allowExtraHeaders": true,
