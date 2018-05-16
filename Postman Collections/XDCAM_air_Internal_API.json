@@ -535,7 +535,7 @@
               "headers": {
                 "Content-Type": "application/json"
               },
-              "body": "{\"name\":\"Temp Project\"}"
+              "body": "{\"name\":\"Omar's Project\"}"
             },
             "expectedResponse": {
               "x-allowExtraHeaders": true,
@@ -808,6 +808,206 @@
             "x-testDescription": "List Users including Admin User"
           }
         ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/rest/devices/{transmitter-id}/files": {
+      "get": {
+        "description": "Returns a list of Camera files \nDatamodel - DeviceClipInfo",
+        "summary": "List Camera Proxies",
+        "tags": [
+          "Device Clips"
+        ],
+        "operationId": "RestDevicesFilesByTransmitterIdGet",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "transmitter-id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "auth": []
+          }
+        ],
+        "x-unitTests": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/rest/devices/{transmitter-id}/files/thumbnail/{clip-name}": {
+      "get": {
+        "description": "Returns a list of Camera files \nDatamodel - DeviceClipInfo",
+        "summary": "Get Camera Thumbnail",
+        "tags": [
+          "Device Clips"
+        ],
+        "operationId": "RestDevicesFilesThumbnailByTransmitterIdAndClipNameGet",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "transmitter-id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "clip-name",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "auth": []
+          }
+        ],
+        "x-unitTests": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/devices/transmitters/{transmitter-id}/jobs": {
+      "post": {
+        "description": "Register a new transfer job. Pass the array of Device - FileClipInfo to the request body  .\r\n\r\nIf hires = true is added to Query Parameter, Hires file transfer is performed. \r\nAlso, if you specify the in = in point, out = out point, partialUpload is done. (valid for partialUploadable file)\r\n\r\nEven when Hires file transfer is performed, the clipName specified in the request body is that of the proxy file.\r\n\r\nIn the case of Proxy transfer, the transfer destination is the NCM FTP server.\r\n\r\nIf hires = true, specify the index number of the FTP server to be uploaded to ftpServer (even if hires = false, it is invalid even if it is specified)",
+        "summary": "Start Transfer",
+        "tags": [
+          "Device File Transfer"
+        ],
+        "operationId": "DevicesTransmittersJobsByTransmitterIdPost",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "transmitter-id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "auth": []
+          }
+        ],
+        "x-unitTests": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/rest/devices/transmitters/{transmitter-id}/jobs": {
+      "get": {
+        "description": "Get a list of all transfer job",
+        "summary": "List all jobs",
+        "tags": [
+          "Device File Transfer"
+        ],
+        "operationId": "RestDevicesTransmittersJobsByTransmitterIdGet",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "transmitter-id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "auth": []
+          }
+        ],
+        "x-unitTests": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      },
+      "delete": {
+        "description": "Delete the transfer job. The movement changes according to the specification of clearCompleted.\r\n\r\ntrue: request body is ignored and jobs with status completed are deleted together\r\nfalse: the job ID specified in the request body is updated\r\nWhen false is specified, the request body has the following form.\r\n\r\n[\r\n   {\"jobId\":\"10\"},\r\n   {\"jobId\":\"20\"},\r\n   {\"jobId\":\"30\"}\r\n]\r\nThe following cases shall not be treated as Response error (return success)\r\n\r\nWhen clearCompleted = true and a completed job does not exist\r\nWhen the job specified by clearCompleted = false does not exist",
+        "summary": "Delete Transfer Jobs",
+        "tags": [
+          "Device File Transfer"
+        ],
+        "operationId": "RestDevicesTransmittersJobsByTransmitterIdDelete",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "transmitter-id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "auth": []
+          }
+        ],
+        "x-unitTests": [],
         "x-operation-settings": {
           "CollectParameters": false,
           "AllowDynamicQueryParameters": false,
@@ -1208,13 +1408,13 @@
     "CreateProjectOrGrouprequest": {
       "title": "Create Project or GroupRequest",
       "example": {
-        "name": "Temp Project"
+        "name": "Omar's Project"
       },
       "type": "object",
       "properties": {
         "name": {
           "description": "",
-          "example": "Temp Project",
+          "example": "Omar's Project",
           "type": "string"
         }
       },
