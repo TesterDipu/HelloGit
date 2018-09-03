@@ -1,2229 +1,731 @@
 {
-  "swagger": "2.0",
   "info": {
-    "version": "1.0",
-    "title": "XDCAM air Internal API",
-    "description": "TODO: Add Description"
+    "_postman_id": "1857263-c5a38f74-1bba-45e1-9a30-dddbdfcf0d27",
+    "name": "XDCAM air Internal API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
   },
-  "host": "example.com",
-  "basePath": "/rest",
-  "securityDefinitions": {
-    "auth": {
-      "type": "oauth2",
-      "flow": "implicit",
-      "authorizationUrl": "http://example.com/rest",
-      "scopes": {},
-      "x-skip-client-authentication": false
-    }
-  },
-  "schemes": [
-    "http"
-  ],
-  "consumes": [
-    "application/json"
-  ],
-  "produces": [
-    "application/json"
-  ],
-  "paths": {
-    "/rest/devices/receivers": {
-      "get": {
-        "description": "Get Receivers",
-        "summary": "List Receivers",
-        "tags": [
-          "Receivers"
-        ],
-        "operationId": "RestDevicesReceiversGet",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [],
-        "responses": {
-          "200": {
-            "description": ""
-          }
-        },
-        "security": [
-          {
-            "auth": []
-          }
-        ],
-        "x-unitTests": [
-          {
-            "request": {
-              "method": "GET",
-              "uri": "/rest/devices/receivers"
-            },
-            "expectedResponse": {
-              "x-allowExtraHeaders": true,
-              "x-bodyMatchMode": "NONE",
-              "x-arrayOrderedMatching": false,
-              "x-arrayCheckCount": false,
-              "x-matchResponseSchema": true,
-              "headers": {}
-            },
-            "x-testShouldPass": true,
-            "x-testEnabled": true,
-            "x-testName": "List Receivers",
-            "x-testDescription": "Get Receivers"
-          }
-        ],
-        "x-operation-settings": {
-          "CollectParameters": false,
-          "AllowDynamicQueryParameters": false,
-          "AllowDynamicFormParameters": false,
-          "IsMultiContentStreaming": false
-        }
-      }
-    },
-    "/rest/devices/supported/receivers": {
-      "get": {
-        "description": "List all Receivers",
-        "summary": "List  Supported Receivers",
-        "tags": [
-          "Receivers"
-        ],
-        "operationId": "RestDevicesSupportedReceiversGet",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [],
-        "responses": {
-          "200": {
-            "description": ""
-          }
-        },
-        "security": [
-          {
-            "auth": []
-          }
-        ],
-        "x-unitTests": [
-          {
-            "request": {
-              "method": "GET",
-              "uri": "/rest/devices/supported/receivers"
-            },
-            "expectedResponse": {
-              "x-allowExtraHeaders": true,
-              "x-bodyMatchMode": "NONE",
-              "x-arrayOrderedMatching": false,
-              "x-arrayCheckCount": false,
-              "x-matchResponseSchema": true,
-              "headers": {}
-            },
-            "x-testShouldPass": true,
-            "x-testEnabled": true,
-            "x-testName": "List  Supported Receivers",
-            "x-testDescription": "List all Receivers"
-          }
-        ],
-        "x-operation-settings": {
-          "CollectParameters": false,
-          "AllowDynamicQueryParameters": false,
-          "AllowDynamicFormParameters": false,
-          "IsMultiContentStreaming": false
-        }
-      }
-    },
-    "/rest/devices/transmitters": {
-      "get": {
-        "description": "Get Transmitters",
-        "summary": "List  Transmitters",
-        "tags": [
-          "Transmitters"
-        ],
-        "operationId": "RestDevicesTransmittersGet",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [],
-        "responses": {
-          "200": {
-            "description": ""
-          }
-        },
-        "security": [
-          {
-            "auth": []
-          }
-        ],
-        "x-unitTests": [
-          {
-            "request": {
-              "method": "GET",
-              "uri": "/rest/devices/transmitters"
-            },
-            "expectedResponse": {
-              "x-allowExtraHeaders": true,
-              "x-bodyMatchMode": "NONE",
-              "x-arrayOrderedMatching": false,
-              "x-arrayCheckCount": false,
-              "x-matchResponseSchema": true,
-              "headers": {}
-            },
-            "x-testShouldPass": true,
-            "x-testEnabled": true,
-            "x-testName": "List  Transmitters",
-            "x-testDescription": "Get Transmitters"
-          }
-        ],
-        "x-operation-settings": {
-          "CollectParameters": false,
-          "AllowDynamicQueryParameters": false,
-          "AllowDynamicFormParameters": false,
-          "IsMultiContentStreaming": false
-        }
-      }
-    },
-    "/rest/devices/supported/transmitters": {
-      "get": {
-        "description": "List all Transmitters",
-        "summary": "List  Supported Transmitters",
-        "tags": [
-          "Transmitters"
-        ],
-        "operationId": "RestDevicesSupportedTransmittersGet",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [],
-        "responses": {
-          "200": {
-            "description": ""
-          }
-        },
-        "security": [
-          {
-            "auth": []
-          }
-        ],
-        "x-unitTests": [
-          {
-            "request": {
-              "method": "GET",
-              "uri": "/rest/devices/supported/transmitters"
-            },
-            "expectedResponse": {
-              "x-allowExtraHeaders": true,
-              "x-bodyMatchMode": "NONE",
-              "x-arrayOrderedMatching": false,
-              "x-arrayCheckCount": false,
-              "x-matchResponseSchema": true,
-              "headers": {}
-            },
-            "x-testShouldPass": true,
-            "x-testEnabled": true,
-            "x-testName": "List  Supported Transmitters",
-            "x-testDescription": "List all Transmitters"
-          }
-        ],
-        "x-operation-settings": {
-          "CollectParameters": false,
-          "AllowDynamicQueryParameters": false,
-          "AllowDynamicFormParameters": false,
-          "IsMultiContentStreaming": false
-        }
-      }
-    },
-    "/rest/auth/token": {
-      "delete": {
-        "description": "Logout",
-        "summary": "Logout",
-        "tags": [
-          "Directory"
-        ],
-        "operationId": "RestAuthTokenDelete",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [],
-        "responses": {
-          "200": {
-            "description": ""
-          }
-        },
-        "security": [
-          {
-            "auth": []
-          }
-        ],
-        "x-unitTests": [
-          {
-            "request": {
-              "method": "DELETE",
-              "uri": "/rest/auth/token"
-            },
-            "expectedResponse": {
-              "x-allowExtraHeaders": true,
-              "x-bodyMatchMode": "NONE",
-              "x-arrayOrderedMatching": false,
-              "x-arrayCheckCount": false,
-              "x-matchResponseSchema": true,
-              "headers": {}
-            },
-            "x-testShouldPass": true,
-            "x-testEnabled": true,
-            "x-testName": "Logout",
-            "x-testDescription": "Logout"
-          }
-        ],
-        "x-operation-settings": {
-          "CollectParameters": false,
-          "AllowDynamicQueryParameters": false,
-          "AllowDynamicFormParameters": false,
-          "IsMultiContentStreaming": false
-        }
-      }
-    },
-    "/rest/auth/user": {
-      "post": {
-        "description": "if Successful the token will be returned in Response header as \"xairtoken'\"",
-        "summary": "Login",
-        "tags": [
-          "Directory"
-        ],
-        "operationId": "RestAuthUserPost",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "Content-Type",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
-            "name": "Body",
-            "in": "body",
-            "required": true,
-            "description": "",
-            "schema": {
-              "$ref": "#/definitions/LoginRequest"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": ""
-          }
-        },
-        "security": [],
-        "x-unitTests": [
-          {
-            "request": {
-              "method": "POST",
-              "uri": "/rest/auth/user",
-              "headers": {
-                "Content-Type": "application/json"
+  "item": [
+    {
+      "_postman_id": "1857263-e439cd8e-6e2a-4e3f-ba11-8c66996923fa",
+      "name": "Devices",
+      "description": "",
+      "item": [
+        {
+          "_postman_id": "1857263-9b8846e7-5023-42c2-9c8f-ba826810c9de",
+          "name": "Receivers",
+          "description": "",
+          "item": [
+            {
+              "_postman_id": "1857263-7d1b3926-8d98-4a3e-8030-0ae27ebe0edc",
+              "name": "List Receivers",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": "https://{{xair-host}}/rest/devices/receivers",
+                "description": "Get Receivers"
               },
-              "body": "{\"username\":\"{{user}}\",\"password\":\"{{pswd}}\"}"
+              "response": []
             },
-            "expectedResponse": {
-              "x-allowExtraHeaders": true,
-              "x-bodyMatchMode": "NONE",
-              "x-arrayOrderedMatching": false,
-              "x-arrayCheckCount": false,
-              "x-matchResponseSchema": true,
-              "headers": {}
-            },
-            "x-testShouldPass": true,
-            "x-testEnabled": true,
-            "x-testName": "Login",
-            "x-testDescription": "if Successful the token will be returned in Response header as \"xairtoken'\""
-          }
-        ],
-        "x-operation-settings": {
-          "CollectParameters": false,
-          "AllowDynamicQueryParameters": false,
-          "AllowDynamicFormParameters": false,
-          "IsMultiContentStreaming": false
-        }
-      }
-    },
-    "/entries/users": {
-      "get": {
-        "description": "List Users including Admin User",
-        "summary": "List All Users",
-        "tags": [
-          "Directory"
-        ],
-        "operationId": "EntriesUsersGet",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "useAdminRole",
-            "in": "query",
-            "required": true,
-            "type": "boolean",
-            "description": ""
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": ""
-          }
-        },
-        "security": [
-          {
-            "auth": []
-          }
-        ],
-        "x-unitTests": [
-          {
-            "request": {
-              "method": "GET",
-              "uri": "/entries/users?useAdminRole=true"
-            },
-            "expectedResponse": {
-              "x-allowExtraHeaders": true,
-              "x-bodyMatchMode": "NONE",
-              "x-arrayOrderedMatching": false,
-              "x-arrayCheckCount": false,
-              "x-matchResponseSchema": true,
-              "headers": {}
-            },
-            "x-testShouldPass": true,
-            "x-testEnabled": true,
-            "x-testName": "List All Users",
-            "x-testDescription": "List Users including Admin User"
-          }
-        ],
-        "x-operation-settings": {
-          "CollectParameters": false,
-          "AllowDynamicQueryParameters": false,
-          "AllowDynamicFormParameters": false,
-          "IsMultiContentStreaming": false
-        }
-      }
-    },
-    "/rest/entries/tenants/{tenant-id}": {
-      "get": {
-        "description": "List Users including Admin User",
-        "summary": "Get Tenant Detail",
-        "tags": [
-          "Directory"
-        ],
-        "operationId": "RestEntriesTenantsByTenantIdGet",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "tenant-id",
-            "in": "path",
-            "required": true,
-            "type": "string",
-            "description": ""
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": ""
-          }
-        },
-        "security": [
-          {
-            "auth": []
-          }
-        ],
-        "x-unitTests": [],
-        "x-operation-settings": {
-          "CollectParameters": false,
-          "AllowDynamicQueryParameters": false,
-          "AllowDynamicFormParameters": false,
-          "IsMultiContentStreaming": false
-        }
-      }
-    },
-    "/rest/entries/groups": {
-      "get": {
-        "description": "List Users including Admin User",
-        "summary": "List All Groups",
-        "tags": [
-          "Directory"
-        ],
-        "operationId": "RestEntriesGroupsGet",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [],
-        "responses": {
-          "200": {
-            "description": ""
-          }
-        },
-        "security": [
-          {
-            "auth": []
-          }
-        ],
-        "x-unitTests": [
-          {
-            "request": {
-              "method": "GET",
-              "uri": "/rest/entries/groups"
-            },
-            "expectedResponse": {
-              "x-allowExtraHeaders": true,
-              "x-bodyMatchMode": "NONE",
-              "x-arrayOrderedMatching": false,
-              "x-arrayCheckCount": false,
-              "x-matchResponseSchema": true,
-              "headers": {}
-            },
-            "x-testShouldPass": true,
-            "x-testEnabled": true,
-            "x-testName": "List All Groups",
-            "x-testDescription": "List Users including Admin User"
-          }
-        ],
-        "x-operation-settings": {
-          "CollectParameters": false,
-          "AllowDynamicQueryParameters": false,
-          "AllowDynamicFormParameters": false,
-          "IsMultiContentStreaming": false
-        }
-      },
-      "post": {
-        "description": "List Users including Admin User",
-        "summary": "Create Project or Group",
-        "tags": [
-          "Directory"
-        ],
-        "operationId": "RestEntriesGroupsPost",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "Content-Type",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
-            "name": "Body",
-            "in": "body",
-            "required": true,
-            "description": "",
-            "schema": {
-              "$ref": "#/definitions/CreateProjectOrGrouprequest"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": ""
-          }
-        },
-        "security": [
-          {
-            "auth": []
-          }
-        ],
-        "x-unitTests": [
-          {
-            "request": {
-              "method": "POST",
-              "uri": "/rest/entries/groups",
-              "headers": {
-                "Content-Type": "application/json"
+            {
+              "_postman_id": "1857263-9c18eca9-1788-4f70-80e3-015e30b462f1",
+              "name": "List  Supported Receivers",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "body": {},
+                "url": "https://{{xair-host}}/rest/devices/supported/receivers",
+                "description": "List all Receivers"
               },
-              "body": "{\"name\":\"Omar's Project\"}"
-            },
-            "expectedResponse": {
-              "x-allowExtraHeaders": true,
-              "x-bodyMatchMode": "NONE",
-              "x-arrayOrderedMatching": false,
-              "x-arrayCheckCount": false,
-              "x-matchResponseSchema": true,
-              "headers": {}
-            },
-            "x-testShouldPass": true,
-            "x-testEnabled": true,
-            "x-testName": "Create Project or Group",
-            "x-testDescription": "List Users including Admin User"
-          }
-        ],
-        "x-operation-settings": {
-          "CollectParameters": false,
-          "AllowDynamicQueryParameters": false,
-          "AllowDynamicFormParameters": false,
-          "IsMultiContentStreaming": false
-        }
-      }
-    },
-    "/rest/entries/groups/{group-id}": {
-      "put": {
-        "description": "List Users including Admin User",
-        "summary": "Rename Group",
-        "tags": [
-          "Directory"
-        ],
-        "operationId": "RestEntriesGroupsByGroupIdPut",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "Content-Type",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
-            "name": "Body",
-            "in": "body",
-            "required": true,
-            "description": "",
-            "schema": {
-              "$ref": "#/definitions/RenameGrouprequest"
+              "response": []
             }
-          },
-          {
-            "name": "group-id",
-            "in": "path",
-            "required": true,
-            "type": "string",
-            "description": ""
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": ""
-          }
+          ],
+          "_postman_isSubFolder": true
         },
-        "security": [
-          {
-            "auth": []
-          }
-        ],
-        "x-unitTests": [],
-        "x-operation-settings": {
-          "CollectParameters": false,
-          "AllowDynamicQueryParameters": false,
-          "AllowDynamicFormParameters": false,
-          "IsMultiContentStreaming": false
-        }
-      },
-      "delete": {
-        "description": "List Users including Admin User",
-        "summary": "Delete Group",
-        "tags": [
-          "Directory"
-        ],
-        "operationId": "RestEntriesGroupsByGroupIdDelete",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "Content-Type",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
-            "name": "group-id",
-            "in": "path",
-            "required": true,
-            "type": "string",
-            "description": ""
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": ""
-          }
-        },
-        "security": [
-          {
-            "auth": []
-          }
-        ],
-        "x-unitTests": [],
-        "x-operation-settings": {
-          "CollectParameters": false,
-          "AllowDynamicQueryParameters": false,
-          "AllowDynamicFormParameters": false,
-          "IsMultiContentStreaming": false
-        }
-      }
-    },
-    "/rest/entries/credentials": {
-      "get": {
-        "description": "TODO: Add Description",
-        "summary": "List Credentials",
-        "tags": [
-          "Directory"
-        ],
-        "operationId": "RestEntriesCredentialsGet",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [],
-        "responses": {
-          "200": {
-            "description": ""
-          }
-        },
-        "security": [
-          {
-            "auth": []
-          }
-        ],
-        "x-unitTests": [
-          {
-            "request": {
-              "method": "GET",
-              "uri": "/rest/entries/credentials"
-            },
-            "expectedResponse": {
-              "x-allowExtraHeaders": true,
-              "x-bodyMatchMode": "NONE",
-              "x-arrayOrderedMatching": false,
-              "x-arrayCheckCount": false,
-              "x-matchResponseSchema": true,
-              "headers": {}
-            },
-            "x-testShouldPass": true,
-            "x-testEnabled": true,
-            "x-testName": "List Credentials",
-            "x-testDescription": "TODO: Add Description"
-          }
-        ],
-        "x-operation-settings": {
-          "CollectParameters": false,
-          "AllowDynamicQueryParameters": false,
-          "AllowDynamicFormParameters": false,
-          "IsMultiContentStreaming": false
-        }
-      }
-    },
-    "/entries": {
-      "get": {
-        "description": "TODO: Add Description",
-        "summary": "List Entries",
-        "tags": [
-          "Directory"
-        ],
-        "operationId": "EntriesGet",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "useAdminRole",
-            "in": "query",
-            "required": true,
-            "type": "boolean",
-            "description": ""
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": ""
-          }
-        },
-        "security": [
-          {
-            "auth": []
-          }
-        ],
-        "x-unitTests": [
-          {
-            "request": {
-              "method": "GET",
-              "uri": "/entries?useAdminRole=true"
-            },
-            "expectedResponse": {
-              "x-allowExtraHeaders": true,
-              "x-bodyMatchMode": "NONE",
-              "x-arrayOrderedMatching": false,
-              "x-arrayCheckCount": false,
-              "x-matchResponseSchema": true,
-              "headers": {}
-            },
-            "x-testShouldPass": true,
-            "x-testEnabled": true,
-            "x-testName": "List Entries",
-            "x-testDescription": "TODO: Add Description"
-          }
-        ],
-        "x-operation-settings": {
-          "CollectParameters": false,
-          "AllowDynamicQueryParameters": false,
-          "AllowDynamicFormParameters": false,
-          "IsMultiContentStreaming": false
-        }
-      }
-    },
-    "/media/bins/{bin-id}/contents": {
-      "get": {
-        "description": "TODO: Add Description",
-        "summary": "Get Bin Content",
-        "tags": [
-          "Media"
-        ],
-        "operationId": "MediaBinsContentsByBinIdGet",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "kind",
-            "in": "query",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
-            "name": "bin-id",
-            "in": "path",
-            "required": true,
-            "type": "string",
-            "description": ""
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": ""
-          }
-        },
-        "security": [
-          {
-            "auth": []
-          }
-        ],
-        "x-unitTests": [],
-        "x-operation-settings": {
-          "CollectParameters": false,
-          "AllowDynamicQueryParameters": false,
-          "AllowDynamicFormParameters": false,
-          "IsMultiContentStreaming": false
-        }
-      }
-    },
-    "/rest/media/assets": {
-      "get": {
-        "description": "TODO: Add Description",
-        "summary": "List Assets",
-        "tags": [
-          "Media"
-        ],
-        "operationId": "RestMediaAssetsGet",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [],
-        "responses": {
-          "200": {
-            "description": ""
-          }
-        },
-        "security": [
-          {
-            "auth": []
-          }
-        ],
-        "x-unitTests": [
-          {
-            "request": {
-              "method": "GET",
-              "uri": "/rest/media/assets"
-            },
-            "expectedResponse": {
-              "x-allowExtraHeaders": true,
-              "x-bodyMatchMode": "NONE",
-              "x-arrayOrderedMatching": false,
-              "x-arrayCheckCount": false,
-              "x-matchResponseSchema": true,
-              "headers": {}
-            },
-            "x-testShouldPass": true,
-            "x-testEnabled": true,
-            "x-testName": "List Assets",
-            "x-testDescription": "TODO: Add Description"
-          }
-        ],
-        "x-operation-settings": {
-          "CollectParameters": false,
-          "AllowDynamicQueryParameters": false,
-          "AllowDynamicFormParameters": false,
-          "IsMultiContentStreaming": false
-        }
-      }
-    },
-    "/devices/health": {
-      "get": {
-        "description": "List Users including Admin User",
-        "summary": "Misc GET",
-        "tags": [
-          "Scratch/Temporary"
-        ],
-        "operationId": "DevicesHealthGet",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [],
-        "responses": {
-          "200": {
-            "description": ""
-          }
-        },
-        "security": [
-          {
-            "auth": []
-          }
-        ],
-        "x-unitTests": [
-          {
-            "request": {
-              "method": "GET",
-              "uri": "/devices/health"
-            },
-            "expectedResponse": {
-              "x-allowExtraHeaders": true,
-              "x-bodyMatchMode": "NONE",
-              "x-arrayOrderedMatching": false,
-              "x-arrayCheckCount": false,
-              "x-matchResponseSchema": true,
-              "headers": {}
-            },
-            "x-testShouldPass": true,
-            "x-testEnabled": true,
-            "x-testName": "Misc GET",
-            "x-testDescription": "List Users including Admin User"
-          }
-        ],
-        "x-operation-settings": {
-          "CollectParameters": false,
-          "AllowDynamicQueryParameters": false,
-          "AllowDynamicFormParameters": false,
-          "IsMultiContentStreaming": false
-        }
-      }
-    },
-    "/rest/devices/{transmitter-id}/files": {
-      "get": {
-        "description": "Returns a list of Camera files \nDatamodel - DeviceClipInfo",
-        "summary": "List Camera Proxies",
-        "tags": [
-          "Device Clips"
-        ],
-        "operationId": "RestDevicesFilesByTransmitterIdGet",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "transmitter-id",
-            "in": "path",
-            "required": true,
-            "type": "string",
-            "description": ""
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": ""
-          }
-        },
-        "security": [
-          {
-            "auth": []
-          }
-        ],
-        "x-unitTests": [],
-        "x-operation-settings": {
-          "CollectParameters": false,
-          "AllowDynamicQueryParameters": false,
-          "AllowDynamicFormParameters": false,
-          "IsMultiContentStreaming": false
-        }
-      }
-    },
-    "/rest/devices/{transmitter-id}/files/thumbnail/{clip-name}": {
-      "get": {
-        "description": "Returns a list of Camera files \nDatamodel - DeviceClipInfo",
-        "summary": "Get Camera Thumbnail",
-        "tags": [
-          "Device Clips"
-        ],
-        "operationId": "RestDevicesFilesThumbnailByTransmitterIdAndClipNameGet",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "transmitter-id",
-            "in": "path",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
-            "name": "clip-name",
-            "in": "path",
-            "required": true,
-            "type": "string",
-            "description": ""
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": ""
-          }
-        },
-        "security": [
-          {
-            "auth": []
-          }
-        ],
-        "x-unitTests": [],
-        "x-operation-settings": {
-          "CollectParameters": false,
-          "AllowDynamicQueryParameters": false,
-          "AllowDynamicFormParameters": false,
-          "IsMultiContentStreaming": false
-        }
-      }
-    },
-    "/devices/transmitters/{transmitter-id}/jobs": {
-      "post": {
-        "description": "Register a new transfer job. Pass the array of Device - FileClipInfo to the request body  .\r\n\r\nIf hires = true is added to Query Parameter, Hires file transfer is performed. \r\nAlso, if you specify the in = in point, out = out point, partialUpload is done. (valid for partialUploadable file)\r\n\r\nEven when Hires file transfer is performed, the clipName specified in the request body is that of the proxy file.\r\n\r\nIn the case of Proxy transfer, the transfer destination is the NCM FTP server.\r\n\r\nIf hires = true, specify the index number of the FTP server to be uploaded to ftpServer (even if hires = false, it is invalid even if it is specified)",
-        "summary": "Start Transfer",
-        "tags": [
-          "Device File Transfer"
-        ],
-        "operationId": "DevicesTransmittersJobsByTransmitterIdPost",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "transmitter-id",
-            "in": "path",
-            "required": true,
-            "type": "string",
-            "description": ""
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": ""
-          }
-        },
-        "security": [
-          {
-            "auth": []
-          }
-        ],
-        "x-unitTests": [],
-        "x-operation-settings": {
-          "CollectParameters": false,
-          "AllowDynamicQueryParameters": false,
-          "AllowDynamicFormParameters": false,
-          "IsMultiContentStreaming": false
-        }
-      }
-    },
-    "/rest/devices/transmitters/{transmitter-id}/jobs": {
-      "get": {
-        "description": "Get a list of all transfer job",
-        "summary": "List all jobs",
-        "tags": [
-          "Device File Transfer"
-        ],
-        "operationId": "RestDevicesTransmittersJobsByTransmitterIdGet",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "transmitter-id",
-            "in": "path",
-            "required": true,
-            "type": "string",
-            "description": ""
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": ""
-          }
-        },
-        "security": [
-          {
-            "auth": []
-          }
-        ],
-        "x-unitTests": [],
-        "x-operation-settings": {
-          "CollectParameters": false,
-          "AllowDynamicQueryParameters": false,
-          "AllowDynamicFormParameters": false,
-          "IsMultiContentStreaming": false
-        }
-      },
-      "delete": {
-        "description": "Delete the transfer job. The movement changes according to the specification of clearCompleted.\r\n\r\ntrue: request body is ignored and jobs with status completed are deleted together\r\nfalse: the job ID specified in the request body is updated\r\nWhen false is specified, the request body has the following form.\r\n\r\n[\r\n   {\"jobId\":\"10\"},\r\n   {\"jobId\":\"20\"},\r\n   {\"jobId\":\"30\"}\r\n]\r\nThe following cases shall not be treated as Response error (return success)\r\n\r\nWhen clearCompleted = true and a completed job does not exist\r\nWhen the job specified by clearCompleted = false does not exist",
-        "summary": "Delete Transfer Jobs",
-        "tags": [
-          "Device File Transfer"
-        ],
-        "operationId": "RestDevicesTransmittersJobsByTransmitterIdDelete",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "transmitter-id",
-            "in": "path",
-            "required": true,
-            "type": "string",
-            "description": ""
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": ""
-          }
-        },
-        "security": [
-          {
-            "auth": []
-          }
-        ],
-        "x-unitTests": [],
-        "x-operation-settings": {
-          "CollectParameters": false,
-          "AllowDynamicQueryParameters": false,
-          "AllowDynamicFormParameters": false,
-          "IsMultiContentStreaming": false
-        }
-      }
-    },
-    "/rest/streaming": {
-      "post": {
-        "description": "TODO: Add Description",
-        "summary": "Start Streaming",
-        "tags": [
-          "Misc"
-        ],
-        "operationId": "RestStreamingPost",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "Content-Type",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": ""
-          },
-          {
-            "name": "Body",
-            "in": "body",
-            "required": true,
-            "description": "",
-            "schema": {
-              "$ref": "#/definitions/StartStreamingrequest"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": ""
-          }
-        },
-        "security": [
-          {
-            "auth": []
-          }
-        ],
-        "x-unitTests": [
-          {
-            "request": {
-              "method": "POST",
-              "uri": "/rest/streaming",
-              "headers": {
-                "Content-Type": "application/json"
+        {
+          "_postman_id": "1857263-dba26772-b701-4549-8b5f-cdd3cd5c3484",
+          "name": "Transmitters",
+          "description": "",
+          "item": [
+            {
+              "_postman_id": "1857263-0d1008c0-36ca-4aca-8007-03ddf4f9ae2b",
+              "name": "List  Transmitters",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": "https://{{xair-host}}/rest/devices/transmitters",
+                "description": "Get Transmitters"
               },
-              "body": "{\"type\":\"streaming\",\"inputSource\":{\"type\":\"transmitter\",\"id\":\"AWLbBnZKNZF78jESAjPL\"},\"outputPort\":{\"receiver\":{\"id\":\"AWHpD9GLNZF78jESAjB_\"},\"id\":\"AWHpD9GLNZF78jESAjB_-1\"},\"networkRange\":\"auto\",\"bitrate\":0,\"delay\":2.5,\"force\":false}"
+              "response": []
             },
-            "expectedResponse": {
-              "x-allowExtraHeaders": true,
-              "x-bodyMatchMode": "NONE",
-              "x-arrayOrderedMatching": false,
-              "x-arrayCheckCount": false,
-              "x-matchResponseSchema": true,
-              "headers": {}
-            },
-            "x-testShouldPass": true,
-            "x-testEnabled": true,
-            "x-testName": "Start Streaming",
-            "x-testDescription": "TODO: Add Description"
-          }
-        ],
-        "x-operation-settings": {
-          "CollectParameters": false,
-          "AllowDynamicQueryParameters": false,
-          "AllowDynamicFormParameters": false,
-          "IsMultiContentStreaming": false
+            {
+              "_postman_id": "1857263-0d031dc8-2952-4071-8711-d57968105835",
+              "name": "List  Supported Transmitters",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "body": {},
+                "url": "https://{{xair-host}}/rest/devices/supported/transmitters",
+                "description": "List all Transmitters"
+              },
+              "response": []
+            }
+          ],
+          "_postman_isSubFolder": true
         }
-      }
-    },
-    "/rest/streaming/{streaming-id}": {
-      "delete": {
-        "description": "TODO: Add Description",
-        "summary": "Stop Streaming",
-        "tags": [
-          "Misc"
-        ],
-        "operationId": "RestStreamingByStreamingIdDelete",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "streaming-id",
-            "in": "path",
-            "required": true,
-            "type": "string",
-            "description": ""
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": ""
+      ],
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "id": "e59123f0-9717-43d5-aa79-eefab5e5b3ca",
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ]
           }
         },
-        "security": [
-          {
-            "auth": []
+        {
+          "listen": "test",
+          "script": {
+            "id": "13ec1702-bf19-4a87-a71a-39f6d9ab051d",
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ]
           }
-        ],
-        "x-unitTests": [],
-        "x-operation-settings": {
-          "CollectParameters": false,
-          "AllowDynamicQueryParameters": false,
-          "AllowDynamicFormParameters": false,
-          "IsMultiContentStreaming": false
         }
-      }
+      ]
     },
-    "/rest/devices/transmitters/{transmitter-id}/thumbnail": {
-      "get": {
-        "description": "Get a thumbnail from the Transmitter",
-        "summary": "Get Thumbnail",
-        "tags": [
-          "Misc"
-        ],
-        "operationId": "RestDevicesTransmittersThumbnailByTransmitterIdGet",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "transmitter-id",
-            "in": "path",
-            "required": true,
-            "type": "string",
-            "description": ""
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": ""
-          }
-        },
-        "security": [
-          {
-            "auth": []
-          }
-        ],
-        "x-unitTests": [],
-        "x-operation-settings": {
-          "CollectParameters": false,
-          "AllowDynamicQueryParameters": false,
-          "AllowDynamicFormParameters": false,
-          "IsMultiContentStreaming": false
-        }
-      }
-    },
-    "/rest/streaming/{streaming-id}/audio-level": {
-      "get": {
-        "description": "TODO: Add Description",
-        "summary": "Get Audio Level",
-        "tags": [
-          "Misc"
-        ],
-        "operationId": "RestStreamingAudioLevelByStreamingIdGet",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "streaming-id",
-            "in": "path",
-            "required": true,
-            "type": "string",
-            "description": ""
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": ""
-          }
-        },
-        "security": [
-          {
-            "auth": []
-          }
-        ],
-        "x-unitTests": [],
-        "x-operation-settings": {
-          "CollectParameters": false,
-          "AllowDynamicQueryParameters": false,
-          "AllowDynamicFormParameters": false,
-          "IsMultiContentStreaming": false
-        }
-      }
-    },
-    "/rest/streaming/{streaming-id}/transfer-info": {
-      "get": {
-        "description": "TODO: Add Description",
-        "summary": "Get Transfer Info",
-        "tags": [
-          "Misc"
-        ],
-        "operationId": "RestStreamingTransferInfoByStreamingIdGet",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "streaming-id",
-            "in": "path",
-            "required": true,
-            "type": "string",
-            "description": ""
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "",
-            "schema": {
-              "$ref": "#/definitions/GetTransferInfo"
-            },
-            "examples": {
-              "application/json": {
-                "mediaData": [
-                  {
-                    "bitrateList": [
-                      3409184,
-                      3395620,
-                      3458604,
-                      3484332,
-                      3430112,
-                      3417100,
-                      2813452,
-                      2825676,
-                      3414404,
-                      3407544,
-                      3414196,
-                      3362372,
-                      3395716,
-                      3434304,
-                      3394416,
-                      3515048,
-                      3581864,
-                      3487044,
-                      3516244,
-                      3514804,
-                      3468344,
-                      3465668,
-                      3510896,
-                      3544340,
-                      3379164,
-                      3298908,
-                      3378688,
-                      3431736,
-                      3463388,
-                      3410136,
-                      3366844,
-                      3433152,
-                      3329088,
-                      3371672,
-                      3509468,
-                      3464548,
-                      3462788,
-                      3468628,
-                      3481508,
-                      3516048,
-                      2698172,
-                      2664152,
-                      3414400,
-                      3445496,
-                      3488808,
-                      3442832,
-                      3495524,
-                      3439228,
-                      2944248,
-                      2994216,
-                      3457724,
-                      3437172,
-                      3450048,
-                      3484152,
-                      3351844,
-                      3310588,
-                      3320772,
-                      3302816,
-                      3425128,
-                      3444868
-                    ],
-                    "qosLossList": [
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0
-                    ],
-                    "maxBitrateValue": 3588596
-                  }
+    {
+      "_postman_id": "1857263-b5413c8c-5887-4dd6-8561-e78db9e0dc9e",
+      "name": "Directory",
+      "description": "All Userss, Groups and Authentication related API",
+      "item": [
+        {
+          "_postman_id": "1857263-73388ed0-b25c-4c8a-bbd9-a283dcc8d013",
+          "name": "Logout",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "1f6c6cb1-cf7e-4727-9e06-378a6ec42147",
+                "type": "text/javascript",
+                "exec": [
+                  "if ( pm.test(\"Success\", function() {",
+                  "    pm.response.to.have.status(200);",
+                  "})) {",
+                  "",
+                  "    pm.environment.set(\"access-token\", \"\" );",
+                  "}"
                 ]
               }
             }
-          }
-        },
-        "security": [
-          {
-            "auth": []
-          }
-        ],
-        "x-unitTests": [],
-        "x-operation-settings": {
-          "CollectParameters": false,
-          "AllowDynamicQueryParameters": false,
-          "AllowDynamicFormParameters": false,
-          "IsMultiContentStreaming": false
-        }
-      }
-    }
-  },
-  "definitions": {
-    "LoginRequest": {
-      "title": "LoginRequest",
-      "example": {
-        "username": "{{user}}",
-        "password": "{{pswd}}"
-      },
-      "type": "object",
-      "properties": {
-        "username": {
-          "description": "",
-          "example": "{{user}}",
-          "type": "string"
-        },
-        "password": {
-          "description": "",
-          "example": "{{pswd}}",
-          "type": "string"
-        }
-      },
-      "required": [
-        "username",
-        "password"
-      ]
-    },
-    "CreateProjectOrGrouprequest": {
-      "title": "Create Project or GroupRequest",
-      "example": {
-        "name": "Omar's Project"
-      },
-      "type": "object",
-      "properties": {
-        "name": {
-          "description": "",
-          "example": "Omar's Project",
-          "type": "string"
-        }
-      },
-      "required": [
-        "name"
-      ]
-    },
-    "RenameGrouprequest": {
-      "title": "Rename GroupRequest",
-      "example": {
-        "name": "Temp Project Renamed"
-      },
-      "type": "object",
-      "properties": {
-        "name": {
-          "description": "",
-          "example": "Temp Project Renamed",
-          "type": "string"
-        }
-      },
-      "required": [
-        "name"
-      ]
-    },
-    "StartStreamingrequest": {
-      "title": "Start StreamingRequest",
-      "example": {
-        "type": "streaming",
-        "inputSource": {
-          "type": "transmitter",
-          "id": "AWLbBnZKNZF78jESAjPL"
-        },
-        "outputPort": {
-          "receiver": {
-            "id": "AWHpD9GLNZF78jESAjB_"
+          ],
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {},
+            "url": "https://{{xair-host}}/rest/auth/token",
+            "description": "Logout"
           },
-          "id": "AWHpD9GLNZF78jESAjB_-1"
+          "response": []
         },
-        "networkRange": "auto",
-        "bitrate": 0,
-        "delay": 2.5,
-        "force": false
-      },
-      "type": "object",
-      "properties": {
-        "type": {
-          "description": "",
-          "example": "streaming",
-          "type": "string"
-        },
-        "inputSource": {
-          "$ref": "#/definitions/InputSource"
-        },
-        "outputPort": {
-          "$ref": "#/definitions/OutputPort"
-        },
-        "networkRange": {
-          "description": "",
-          "example": "auto",
-          "type": "string"
-        },
-        "bitrate": {
-          "description": "",
-          "example": 0,
-          "type": "integer",
-          "format": "int32"
-        },
-        "delay": {
-          "description": "",
-          "example": 2.5,
-          "type": "number",
-          "format": "double"
-        },
-        "force": {
-          "description": "",
-          "example": false,
-          "type": "boolean"
-        }
-      },
-      "required": [
-        "type",
-        "inputSource",
-        "outputPort",
-        "networkRange",
-        "bitrate",
-        "delay",
-        "force"
-      ]
-    },
-    "InputSource": {
-      "title": "InputSource",
-      "example": {
-        "type": "transmitter",
-        "id": "AWLbBnZKNZF78jESAjPL"
-      },
-      "type": "object",
-      "properties": {
-        "type": {
-          "description": "",
-          "example": "transmitter",
-          "type": "string"
-        },
-        "id": {
-          "description": "",
-          "example": "AWLbBnZKNZF78jESAjPL",
-          "type": "string"
-        }
-      },
-      "required": [
-        "type",
-        "id"
-      ]
-    },
-    "OutputPort": {
-      "title": "OutputPort",
-      "example": {
-        "receiver": {
-          "id": "AWHpD9GLNZF78jESAjB_"
-        },
-        "id": "AWHpD9GLNZF78jESAjB_-1"
-      },
-      "type": "object",
-      "properties": {
-        "receiver": {
-          "$ref": "#/definitions/Receiver"
-        },
-        "id": {
-          "description": "",
-          "example": "AWHpD9GLNZF78jESAjB_-1",
-          "type": "string"
-        }
-      },
-      "required": [
-        "receiver",
-        "id"
-      ]
-    },
-    "Receiver": {
-      "title": "Receiver",
-      "example": {
-        "id": "AWHpD9GLNZF78jESAjB_"
-      },
-      "type": "object",
-      "properties": {
-        "id": {
-          "description": "",
-          "example": "AWHpD9GLNZF78jESAjB_",
-          "type": "string"
-        }
-      },
-      "required": [
-        "id"
-      ]
-    },
-    "GetTransferInfo": {
-      "title": "Get Transfer Info",
-      "example": {
-        "mediaData": [
-          {
-            "bitrateList": [
-              3409184,
-              3395620,
-              3458604,
-              3484332,
-              3430112,
-              3417100,
-              2813452,
-              2825676,
-              3414404,
-              3407544,
-              3414196,
-              3362372,
-              3395716,
-              3434304,
-              3394416,
-              3515048,
-              3581864,
-              3487044,
-              3516244,
-              3514804,
-              3468344,
-              3465668,
-              3510896,
-              3544340,
-              3379164,
-              3298908,
-              3378688,
-              3431736,
-              3463388,
-              3410136,
-              3366844,
-              3433152,
-              3329088,
-              3371672,
-              3509468,
-              3464548,
-              3462788,
-              3468628,
-              3481508,
-              3516048,
-              2698172,
-              2664152,
-              3414400,
-              3445496,
-              3488808,
-              3442832,
-              3495524,
-              3439228,
-              2944248,
-              2994216,
-              3457724,
-              3437172,
-              3450048,
-              3484152,
-              3351844,
-              3310588,
-              3320772,
-              3302816,
-              3425128,
-              3444868
-            ],
-            "qosLossList": [
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0
-            ],
-            "maxBitrateValue": 3588596
-          }
-        ]
-      },
-      "type": "object",
-      "properties": {
-        "mediaData": {
-          "description": "",
-          "example": [
+        {
+          "_postman_id": "1857263-e81f9d25-088e-4d7d-be23-efe2353b7a1f",
+          "name": "Login",
+          "event": [
             {
-              "bitrateList": [
-                3409184,
-                3395620,
-                3458604,
-                3484332,
-                3430112,
-                3417100,
-                2813452,
-                2825676,
-                3414404,
-                3407544,
-                3414196,
-                3362372,
-                3395716,
-                3434304,
-                3394416,
-                3515048,
-                3581864,
-                3487044,
-                3516244,
-                3514804,
-                3468344,
-                3465668,
-                3510896,
-                3544340,
-                3379164,
-                3298908,
-                3378688,
-                3431736,
-                3463388,
-                3410136,
-                3366844,
-                3433152,
-                3329088,
-                3371672,
-                3509468,
-                3464548,
-                3462788,
-                3468628,
-                3481508,
-                3516048,
-                2698172,
-                2664152,
-                3414400,
-                3445496,
-                3488808,
-                3442832,
-                3495524,
-                3439228,
-                2944248,
-                2994216,
-                3457724,
-                3437172,
-                3450048,
-                3484152,
-                3351844,
-                3310588,
-                3320772,
-                3302816,
-                3425128,
-                3444868
-              ],
-              "qosLossList": [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
-              ],
-              "maxBitrateValue": 3588596
+              "listen": "test",
+              "script": {
+                "id": "337eb9d0-e1a9-44b8-848b-9a1cd5420b1a",
+                "type": "text/javascript",
+                "exec": [
+                  "if ( pm.test(\"Success\", function() {",
+                  "    pm.response.to.have.status(200);",
+                  "})) {",
+                  "    var token = postman.getResponseHeader(\"xairtoken\");",
+                  "    pm.environment.set(\"access-token\", token );",
+                  "    ",
+                  "    if ( pm.response.to.be.json) {",
+                  "        var tenant_id = JSON.parse(responseBody).tenant.id;",
+                  "        pm.environment.set(\"tenant-id\", tenant_id );",
+                  "        ",
+                  "    }",
+                  "    ",
+                  "} else {",
+                  "    pm.envionment.set(\"access-token\", \"\");",
+                  "    pm.environment.set(\"tenant-id\", \"\");",
+                  "}",
+                  ""
+                ]
+              }
             }
           ],
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/MediaDatum"
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"username\" : \"{{user}}\",\n  \"password\" : \"{{pswd}}\"\n}"
+            },
+            "url": "https://{{xair-host}}/rest/auth/user",
+            "description": "if Successful the token will be returned in Response header as \"xairtoken'\""
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "1857263-f3195440-250b-4ea4-bda4-dd51492412e7",
+          "name": "List All Users",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": {
+              "raw": "https://{{xair-host}}/rest/entries/users?useAdminRole=true",
+              "protocol": "https",
+              "host": [
+                "{{xair-host}}"
+              ],
+              "path": [
+                "rest",
+                "entries",
+                "users"
+              ],
+              "query": [
+                {
+                  "key": "useAdminRole",
+                  "value": "true",
+                  "equals": true
+                }
+              ]
+            },
+            "description": "List Users including Admin User"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "1857263-27ca4cc9-0fd3-452f-88fe-7184bdea26a7",
+          "name": "Get Tenant Detail",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": "https://{{xair-host}}/rest/entries/tenants/{{tenant-id}}",
+            "description": "List Users including Admin User"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "1857263-61c14c00-ba04-4fbc-9d6f-10d7707f6545",
+          "name": "List All Groups",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": "https://{{xair-host}}/rest/entries/groups",
+            "description": "List Users including Admin User"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "1857263-c10ac311-6bcd-461b-9596-d8d4627f4b5c",
+          "name": "Create Project or Group",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "\r\n{\r\n  \"name\": \"Omar's Project\"\r\n\r\n}"
+            },
+            "url": "https://{{xair-host}}/rest/entries/groups",
+            "description": "List Users including Admin User"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "1857263-76676385-1b6e-48d9-8a15-d79a6fc6b5a9",
+          "name": "Rename Group",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "\r\n{\r\n  \"name\": \"Temp Project Renamed\"\r\n\r\n}"
+            },
+            "url": "https://{{xair-host}}/rest/entries/groups/{{group-id}}",
+            "description": "List Users including Admin User"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "1857263-92d4a193-0da5-44aa-9a6d-92f870a02c9c",
+          "name": "Delete Group",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "https://{{xair-host}}/rest/entries/groups/{{group-id}}",
+            "description": "List Users including Admin User"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "1857263-2ac4aabb-6135-4ff5-b124-bb37331c9348",
+          "name": "List Credentials",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": "https://{{xair-host}}/rest/entries/credentials"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "1857263-43d5c6fa-061b-47c0-95e3-ca0b78072c1c",
+          "name": "List Entries",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": {
+              "raw": "https://{{xair-host}}/rest/entries?useAdminRole=true",
+              "protocol": "https",
+              "host": [
+                "{{xair-host}}"
+              ],
+              "path": [
+                "rest",
+                "entries"
+              ],
+              "query": [
+                {
+                  "key": "useAdminRole",
+                  "value": "true",
+                  "equals": true
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "id": "249bfd81-90c5-4604-bc59-87a295f84d2c",
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "id": "8fabbf34-68f2-470a-97dd-58f9a769249f",
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ]
           }
         }
-      },
-      "required": [
-        "mediaData"
       ]
     },
-    "MediaDatum": {
-      "title": "MediaDatum",
-      "example": {
-        "bitrateList": [
-          3409184,
-          3395620,
-          3458604,
-          3484332,
-          3430112,
-          3417100,
-          2813452,
-          2825676,
-          3414404,
-          3407544,
-          3414196,
-          3362372,
-          3395716,
-          3434304,
-          3394416,
-          3515048,
-          3581864,
-          3487044,
-          3516244,
-          3514804,
-          3468344,
-          3465668,
-          3510896,
-          3544340,
-          3379164,
-          3298908,
-          3378688,
-          3431736,
-          3463388,
-          3410136,
-          3366844,
-          3433152,
-          3329088,
-          3371672,
-          3509468,
-          3464548,
-          3462788,
-          3468628,
-          3481508,
-          3516048,
-          2698172,
-          2664152,
-          3414400,
-          3445496,
-          3488808,
-          3442832,
-          3495524,
-          3439228,
-          2944248,
-          2994216,
-          3457724,
-          3437172,
-          3450048,
-          3484152,
-          3351844,
-          3310588,
-          3320772,
-          3302816,
-          3425128,
-          3444868
-        ],
-        "qosLossList": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        "maxBitrateValue": 3588596
-      },
-      "type": "object",
-      "properties": {
-        "bitrateList": {
-          "description": "",
-          "example": [
-            3409184,
-            3395620,
-            3458604,
-            3484332,
-            3430112,
-            3417100,
-            2813452,
-            2825676,
-            3414404,
-            3407544,
-            3414196,
-            3362372,
-            3395716,
-            3434304,
-            3394416,
-            3515048,
-            3581864,
-            3487044,
-            3516244,
-            3514804,
-            3468344,
-            3465668,
-            3510896,
-            3544340,
-            3379164,
-            3298908,
-            3378688,
-            3431736,
-            3463388,
-            3410136,
-            3366844,
-            3433152,
-            3329088,
-            3371672,
-            3509468,
-            3464548,
-            3462788,
-            3468628,
-            3481508,
-            3516048,
-            2698172,
-            2664152,
-            3414400,
-            3445496,
-            3488808,
-            3442832,
-            3495524,
-            3439228,
-            2944248,
-            2994216,
-            3457724,
-            3437172,
-            3450048,
-            3484152,
-            3351844,
-            3310588,
-            3320772,
-            3302816,
-            3425128,
-            3444868
-          ],
-          "type": "array",
-          "items": {
-            "type": "integer",
-            "format": "int32"
-          }
+    {
+      "_postman_id": "1857263-963fa581-6e12-4dc9-a654-16705714a83f",
+      "name": "NRCS",
+      "description": "API related to NRCS (News Room Control System)",
+      "item": []
+    },
+    {
+      "_postman_id": "1857263-7e79790a-f900-45dd-9302-36b69c5835fa",
+      "name": "Media",
+      "description": "All Media Related API",
+      "item": [
+        {
+          "_postman_id": "1857263-97a8d93e-2ecf-44f8-a65d-1af1cae54f6a",
+          "name": "Get Bin Content",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": {
+              "raw": "https://{{xair-host}}/rest/media/bins/{{bin-id}}/contents?kind=bin",
+              "protocol": "https",
+              "host": [
+                "{{xair-host}}"
+              ],
+              "path": [
+                "rest",
+                "media",
+                "bins",
+                "{{bin-id}}",
+                "contents"
+              ],
+              "query": [
+                {
+                  "key": "kind",
+                  "value": "bin",
+                  "equals": true
+                }
+              ]
+            }
+          },
+          "response": []
         },
-        "qosLossList": {
-          "description": "",
-          "example": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ],
-          "type": "array",
-          "items": {
-            "type": "integer",
-            "format": "int32"
-          }
-        },
-        "maxBitrateValue": {
-          "description": "",
-          "example": 3588596,
-          "type": "integer",
-          "format": "int32"
+        {
+          "_postman_id": "1857263-f7842c88-b2f0-4430-9a70-d59fd693c80a",
+          "name": "List Assets",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": "https://{{xair-host}}/rest/media/assets"
+          },
+          "response": []
         }
+      ]
+    },
+    {
+      "_postman_id": "1857263-4cb49bb8-954d-4c3a-bb29-5ec779da7c49",
+      "name": "Transcoder",
+      "description": "",
+      "item": []
+    },
+    {
+      "_postman_id": "1857263-6bb05148-b8e4-495e-8bbf-279a328c7351",
+      "name": "Scratch/Temporary",
+      "description": "Folder containing temporary/scratch API",
+      "item": [
+        {
+          "_postman_id": "1857263-070989f1-5fc8-4181-a665-9ad979b5d554",
+          "name": "Misc GET",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": "https://{{xair-host}}/devices/health",
+            "description": "List Users including Admin User"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "_postman_id": "1857263-ec902ea5-18d5-4133-877e-0ab32e21443c",
+      "name": "Device Clips",
+      "description": "APIs related to Camera Assets",
+      "item": [
+        {
+          "_postman_id": "1857263-5d5edc36-bdfc-4c2b-8189-11c6b8ae1cf3",
+          "name": "List Camera Proxies",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": "https://{{xair-host}}/rest/devices/{{transmitter-id}}/files",
+            "description": "Returns a list of Camera files \nDatamodel - DeviceClipInfo"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "1857263-c90fddb7-f0e0-4a36-9186-d62a81d8d8cd",
+          "name": "Get Camera Thumbnail",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": "https://{{xair-host}}/rest/devices/{{transmitter-id}}/files/thumbnail/{{clip-name}}",
+            "description": "Returns a list of Camera files \nDatamodel - DeviceClipInfo"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "_postman_id": "1857263-7162244d-9ff5-4410-af14-d89b5e97bfff",
+      "name": "Device File Transfer",
+      "description": "FTP Transfer Jobs from Camera",
+      "item": [
+        {
+          "_postman_id": "1857263-d4e9097f-be6d-449f-a831-94046d041542",
+          "name": "Start Transfer ",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {},
+            "url": {
+              "raw": "https://{{xair-host}}/rest/devices/transmitters/{{transmitter-id}}/jobs",
+              "protocol": "https",
+              "host": [
+                "{{xair-host}}"
+              ],
+              "path": [
+                "rest",
+                "devices",
+                "transmitters",
+                "{{transmitter-id}}",
+                "jobs"
+              ],
+              "query": [
+                {
+                  "key": "hires",
+                  "value": "false",
+                  "equals": true,
+                  "description": "true/false",
+                  "disabled": true
+                },
+                {
+                  "key": "in",
+                  "value": "0",
+                  "equals": true,
+                  "description": "Start frame (optional)",
+                  "disabled": true
+                },
+                {
+                  "key": "out",
+                  "value": "1000",
+                  "equals": true,
+                  "description": "End Frame (optional)",
+                  "disabled": true
+                },
+                {
+                  "key": "ftpserver",
+                  "value": "1",
+                  "equals": true,
+                  "disabled": true
+                }
+              ]
+            },
+            "description": "Register a new transfer job. Pass the array of Device - FileClipInfo to the request body  .\r\n\r\nIf hires = true is added to Query Parameter, Hires file transfer is performed. \r\nAlso, if you specify the in = in point, out = out point, partialUpload is done. (valid for partialUploadable file)\r\n\r\nEven when Hires file transfer is performed, the clipName specified in the request body is that of the proxy file.\r\n\r\nIn the case of Proxy transfer, the transfer destination is the NCM FTP server.\r\n\r\nIf hires = true, specify the index number of the FTP server to be uploaded to ftpServer (even if hires = false, it is invalid even if it is specified)"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "1857263-1ccf388c-5ead-4f82-8f64-55d24da94f3e",
+          "name": "List all jobs",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": "https://{{xair-host}}/rest/devices/transmitters/{{transmitter-id}}/jobs",
+            "description": "Get a list of all transfer job"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "1857263-e51c2214-bae9-475b-af86-42e42ab1f2ea",
+          "name": "Delete Transfer Jobs",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {},
+            "url": "https://{{xair-host}}/rest/devices/transmitters/{{transmitter-id}}/jobs",
+            "description": "Delete the transfer job. The movement changes according to the specification of clearCompleted.\r\n\r\ntrue: request body is ignored and jobs with status completed are deleted together\r\nfalse: the job ID specified in the request body is updated\r\nWhen false is specified, the request body has the following form.\r\n\r\n[\r\n   {\"jobId\":\"10\"},\r\n   {\"jobId\":\"20\"},\r\n   {\"jobId\":\"30\"}\r\n]\r\nThe following cases shall not be treated as Response error (return success)\r\n\r\nWhen clearCompleted = true and a completed job does not exist\r\nWhen the job specified by clearCompleted = false does not exist"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "_postman_id": "1857263-9a9e9da8-35dd-4823-9eb0-fac388d523bb",
+      "name": "Start Streaming",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"type\": \"streaming\",\n\t\"inputSource\": {\n\t\t\"type\": \"transmitter\",\n\t\t\"id\": \"AWLbBnZKNZF78jESAjPL\"\n\t},\n\t\"outputPort\": {\n\t\t\"receiver\": {\n\t\t\t\"id\": \"AWHpD9GLNZF78jESAjB_\"\n\t\t},\n\t\t\"id\": \"AWHpD9GLNZF78jESAjB_-1\"\n\t\t\n\t},\n\t\"networkRange\": \"auto\",\n    \"bitrate\": 0,\n\t\"delay\": 2.5,\n\n\t\"force\": false\n}"
+        },
+        "url": "https://{{xair-host}}/rest/streaming"
       },
-      "required": [
-        "bitrateList",
-        "qosLossList",
-        "maxBitrateValue"
+      "response": []
+    },
+    {
+      "_postman_id": "1857263-54af842f-3ff4-4c8f-aa37-30d40343aa47",
+      "name": "Stop Streaming",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {},
+        "url": "https://{{xair-host}}/rest/streaming/{{streaming-id}}"
+      },
+      "response": []
+    },
+    {
+      "_postman_id": "1857263-174300d3-827a-4a5f-84b0-73891f30d04f",
+      "name": "Get Thumbnail",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {},
+        "url": "https://{{xair-host}}/rest/devices/transmitters/{{transmitter-id}}/thumbnail",
+        "description": "Get a thumbnail from the Transmitter"
+      },
+      "response": []
+    },
+    {
+      "_postman_id": "1857263-098f0505-869c-45f6-8e80-bdf546694efc",
+      "name": "Get Audio Level",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {},
+        "url": "https://{{xair-host}}/rest/streaming/{{streaming-id}}/audio-level"
+      },
+      "response": []
+    },
+    {
+      "_postman_id": "1857263-d7ce0fa6-a994-4a46-91a0-11464053236a",
+      "name": "Get Transfer Info",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {},
+        "url": "https://{{xair-host}}/rest/streaming/{{streaming-id}}/transfer-info"
+      },
+      "response": [
+        {
+          "id": "1857263-e85db5b8-89a1-44a8-923c-f01865b36ade",
+          "name": "Get Transfer Info",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": "https://{{xair-host}}/rest/streaming/{{streaming-id}}/transfer-info"
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Cache-Control",
+              "value": "no-store",
+              "name": "Cache-Control",
+              "description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive",
+              "name": "Connection",
+              "description": "Options that are desired for the connection"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json;charset=UTF-8",
+              "name": "Content-Type",
+              "description": "The mime type of this content"
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 20 Apr 2018 19:50:14 GMT",
+              "name": "Date",
+              "description": "The date and time that the message was sent"
+            },
+            {
+              "key": "Server",
+              "value": "nginx/1.12.0",
+              "name": "Server",
+              "description": "A name for the server"
+            },
+            {
+              "key": "Strict-Transport-Security",
+              "value": "max-age=31536000",
+              "name": "Strict-Transport-Security",
+              "description": "A HSTS Policy informing the HTTP client how long to cache the HTTPS only policy and whether this applies to subdomains."
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked",
+              "name": "Transfer-Encoding",
+              "description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+            },
+            {
+              "key": "X-Frame-Options",
+              "value": "SAMEORIGIN",
+              "name": "X-Frame-Options",
+              "description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+            },
+            {
+              "key": "X-XSS-Protection",
+              "value": "1; mode=block",
+              "name": "X-XSS-Protection",
+              "description": "Cross-site scripting (XSS) filter"
+            }
+          ],
+          "cookie": [],
+          "responseTime": null,
+          "body": "{\"mediaData\":[{\"bitrateList\":[3409184,3395620,3458604,3484332,3430112,3417100,2813452,2825676,3414404,3407544,3414196,3362372,3395716,3434304,3394416,3515048,3581864,3487044,3516244,3514804,3468344,3465668,3510896,3544340,3379164,3298908,3378688,3431736,3463388,3410136,3366844,3433152,3329088,3371672,3509468,3464548,3462788,3468628,3481508,3516048,2698172,2664152,3414400,3445496,3488808,3442832,3495524,3439228,2944248,2994216,3457724,3437172,3450048,3484152,3351844,3310588,3320772,3302816,3425128,3444868],\"qosLossList\":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],\"maxBitrateValue\":3588596}]}"
+        }
       ]
     }
-  }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": {
+      "token": "{{access-token}}"
+    }
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "id": "16ec4a05-5e5b-4d6f-81fe-bf0b4493b96a",
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "id": "d671b59c-1078-4245-adc3-e78b08c05cd3",
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ]
 }
